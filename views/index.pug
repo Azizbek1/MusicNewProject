@@ -1,0 +1,10 @@
+extends layout
+block content
+    h1 #{title}
+    h2  Hello NODE JS 
+    ul.list-group 
+        each music, i in musics 
+            li.list-group-item
+                a(href='/musics/'+ music.id)= music.name 
+            
+        

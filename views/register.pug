@@ -1,0 +1,21 @@
+extends layout
+block content
+    h1 #{title}
+    h2  Registrasiya o'tamiz
+    form(method="POST", action="/registr")
+        .form-group
+            label(for='Name') Isim
+            input#Name.form-control(type='text', name="name", aria-describedby='emailHelp')
+        .form-group
+            label(for='Singer') Email
+            input#Singer.form-control(type='text', name="email")
+        .form-group
+            label(for='comment') Foydalunuvchini ismi
+            input#comment.form-control(type='text', name="username")
+        .form-group
+            label(for='parol') Parol
+            input#parol.form-control(type='password', name="password")
+        .form-group
+            label(for='kiriting') Parol qaytatan kiriting
+            input#kiriting.form-control(type='password', name="password2")
+        button.btn.btn-primary(type='submit') Ro'hatdan o'tamiz

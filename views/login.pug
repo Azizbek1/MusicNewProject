@@ -1,0 +1,12 @@
+extends layout
+block content
+    h1 #{title}
+    h2  Registrasiya o'tamiz
+    form(method="POST", action="/login")
+        .form-group
+            label(for='Name') Foydalanuvchini laqabi yoki Isim
+            input#Name.form-control(type='text', name="username", aria-describedby='emailHelp')
+        .form-group
+            label(for='parol') Parol
+            input#parol.form-control(type='password', name="password")
+        button.btn.btn-primary(type='submit') Tizimga Kir

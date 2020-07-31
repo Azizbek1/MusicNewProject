@@ -1,0 +1,14 @@
+extends layout
+block content
+    div.m-5
+        h1= music.name
+        h5 Bastakor #{singer}
+        hr
+        p= music.comment
+        if user 
+            if user.id === music.singer
+                a.btn.btn-warning.mr-5(href="/music/edit/" + music._id) O'zgartirish
+                button.btn.btn-success.music_delete(type='submit' data-id=music._id) O'chirish
+    
+            
+        

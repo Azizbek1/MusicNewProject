@@ -1,0 +1,15 @@
+extends layout
+block content
+    h1 #{title}
+    h2  Hello NODE JS 
+    form(method="POST", action="/musics/add")
+        .form-group
+            label(for='Name') Musiqa Isim
+            input#Name.form-control(type='text', name="name", aria-describedby='emailHelp')
+        //- .form-group
+        //-     label(for='Singer') Bastakor
+        //-     input#Singer.form-control(type='text', name="singer")
+        .form-group
+            label(for='comment') Izoh
+            input#comment.form-control(type='text', name="comment")
+        button.btn.btn-primary(type='submit') Jo'nat
